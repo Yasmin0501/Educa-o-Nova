@@ -116,22 +116,37 @@
   </section>
 
   <!-- Script das abas -->
-  <script>
-    const toggles = document.querySelectorAll(".toggle");
-    toggles.forEach(toggle => {
-      toggle.addEventListener("click", () => {
-        const content = toggle.nextElementSibling;
-        content.classList.toggle("active");
-        toggles.forEach(otherToggle => {
-          if(otherToggle !== toggle) {
-            const otherContent = otherToggle.nextElementSibling;
-            otherContent.classList.remove("active");
-          }
-        });
-      });
-    });
-  </script>
+<script>
+const toggles = document.querySelectorAll(".toggle");
 
+toggles.forEach(toggle => {
+  // Guarda o texto original da aba
+  const originalText = toggle.textContent.trim();
+  
+  // Define ícone inicial
+  toggle.innerHTML = "&#9656; " + originalText; // ►
+
+  toggle.addEventListener("click", () => {
+    const content = toggle.nextElementSibling;
+    content.classList.toggle("active");
+
+    if (content.classList.contains("active")) {
+      toggle.innerHTML = "&#9662; " + originalText; // ▼
+      toggle.style.backgroundColor = "#e0e0e5"; 
+      toggle.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+    } else {
+      toggle.innerHTML = "&#9656; " + originalText; // ►
+      toggle.style.backgroundColor = "#f4f4f9";
+      toggle.style.boxShadow = "none";
+    }
+  });
+});
+</script>
+
+<div style="text-align: center; margin-top: 30px;">
+      <a href="index.html" class="botao">← Voltar ao Início</a>
+    </div>
+    
   <footer>
     <p>Site criado para trabalho universitário - sem fins lucrativos</p>
   </footer>
