@@ -1,0 +1,212 @@
+/* Corpo do site */
+body {
+  font-family: 'Georgia', serif;
+  background-color: hsla(0, 0%, 62%, 0.551);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+  background: url(https://www.liberdadedecomunicacao.com.br/liberdadedecomunicacao.com.br/images/jornal%20impresso.gif?crc=176247795) no-repeat center center;
+  background-size: cover;
+  color: #b8b7b6;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 6px solid #a09f9d;
+}
+
+header h1 {
+  font-size: 3.8em;
+  font-family: 'Georgia', serif;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #b8b7b6;
+  text-shadow: 5px 10px 5px rgba(0,0,0,0.4);
+  margin: 0;
+  border-bottom: 5px solid #a09f9d;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+header p.subtitulo {
+  font-size: 1.3em;
+  color: #dcdcdc;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+header a {
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 1.4em;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #444;
+  text-decoration: underline;
+}
+
+/* Manchete */
+.manchete {
+  background-color: #f4f4f9;
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 1.2em;
+  border-left: 5px solid #696969;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.manchete .destaque {
+  font-style: italic;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Informações acadêmicas */
+.academicas {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px 25px;
+  border-radius: 10px;
+  max-width: 750px;
+  font-size: 0.95em;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid #ccc;
+}
+
+/* Seções principais */
+section {
+  background-color: #fff8f0;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 950px;
+  box-shadow: 0 10px 15px rgba(34, 33, 33, 0.1);
+}
+
+/* Títulos */
+section h2 {
+  color: #3a3a3a;
+  font-size: 2em;
+  border-bottom: 2px solid #7c7c7c;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  color: #555;
+  margin-top: 18px;
+  font-size: 1.4em;
+  border-left: 4px solid #999;
+  padding-left: 8px;
+}
+
+/* Parágrafos */
+section p {
+  font-size: 1.1em;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Negrito e destaques */
+strong, b {
+  color: #222121;
+}
+
+/* Notícias / Filósofos */
+.noticias {
+  display: flex;               
+  justify-content: center; 
+  gap: 40px;                   
+  padding: 30px;
+  flex-wrap: wrap;             
+}
+
+.noticias article {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticias article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.noticias article img {
+  width: 100%;                
+  height: 200px;              
+  object-fit: cover;          
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.noticias article h3 {
+  margin: 10px 0 8px 0;
+  color: #444;
+}
+
+.noticias article p a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.noticias article p a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 30px;
+  font-size: 0.95em;
+}
+
+/* Conteúdo das páginas internas com abas */
+.conteudo h2.toggle {
+  cursor: pointer;
+  background-color: #f4f4f9;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: background 0.3s ease;
+  color: #696969;
+}
+
+.conteudo h2.toggle:hover {
+  background-color: #e0e0e5;
+}
+
+.conteudo .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: #fff8f0;
+  border-radius: 8px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.conteudo .content.active {
+  max-height: 2000px; /* valor grande suficiente para todo conteúdo */
+  padding: 15px;
+}
+
